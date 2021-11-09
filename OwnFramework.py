@@ -9,11 +9,10 @@ class NluBasic():
     def requestMessage():
         msg = input("Please Input an answer: ")
         return msg
-    def readMessage():
-        msg = NluBasic.requestMessage()
-        
-        return print(f"You wrote following message: {msg} ")
     
-    readMessage()
+    def __init__(self):
+        msg = NluBasic.requestMessage()
+        return print(f"You wrote following message: {msg} ")
 
+NluBasic()
     
