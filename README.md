@@ -5,8 +5,8 @@
 ### Docker setup 
 If you want a quick and easy start, this is the guide with docker:
 - What you need to have installed:
-    - [Docker](www.docker.com)  
-    - [NPM](www.npm.com) 
+    - [Docker](https://www.docker.com)  
+    - [NPM](https://www.npm.com) 
 - Step by step guide:
     1. `$ git clone git@github.com:United-AI/AI-assistant.git`
     2. `$ git checkout DiscordDev` 
@@ -17,7 +17,7 @@ If you want a quick and easy start, this is the guide with docker:
 ### Normal setup 
 If you don't want to learn or install docker, this is how it is done without:
 - What you need to have installed:
-    - [NPM](www.npm.com) 
+    - [NPM](https://www.npm.com) 
 - Step by step guide:
     1. `$ git clone git@github.com:United-AI/AI-assistant.git`
     2. `$ git checkout DiscordDev` 
