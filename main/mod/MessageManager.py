@@ -50,18 +50,23 @@ class Manager():
         """
         impdi.Importer.inputDoc()
         botMSG = "error103"
-        for val in impdi.Importer.helloDict:
-            helloComp=val
+        for check in impdi.Importer.helloDict:
+            helloComp=check
             pattern = r'(^|[^\w]){}([^\w]|$)'.format(helloComp)
-            print(pattern)
             pattern = re.compile(pattern, re.IGNORECASE)
             matches = re.search(pattern, Manager.msg.lower())
             if bool(matches):
                 botMSG = "Hey, how are you?"
             else:
                 pass
-        if Manager.msg.lower() not in impdi.Importer.howAreYouDict:
-            pass
-        else:
-            botMSG = "Thank you for using me, what can I help you with? "
+        for val in impdi.Importer.howAreYouDict:
+            howAreComp=val
+            pattern = r'(^|[^\w]){}([^\w]|$)'.format(howAreComp)
+            pattern = re.compile(pattern, re.IGNORECASE)
+            matches = re.search(pattern, Manager.msg.lower())
+            if bool(matches):
+                botMSG = "Thank you for using me, what can I help you with? "
+            else:
+                pass
+            
         return print(f"UnitedAi Bot: {botMSG}")
