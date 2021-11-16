@@ -4,7 +4,8 @@ Created on Mon Nov 15 13:47:36 2021
 
 @author: mHiko
 """
-import ImportDoc.Import as impdi
+from mod import ImportDoc as impdi
+
 
 class Manager():
     msg = ""
@@ -44,13 +45,13 @@ class Manager():
         It is not case sensitive but for now it can only compare identical strings
 
         """
-        impdi.inputDoc
+        impdi.Importer.inputDoc()
         botMSG = "error103"
-        if Manager.msg.lower() not in impdi.helloDict:
+        if Manager.msg.lower() not in impdi.Importer.helloDict:
             pass
         else:
             botMSG = "Hey, how are you?"
-        if Manager.msg.lower() not in impdi.howAreYouDict:
+        if Manager.msg.lower() not in impdi.Importer.howAreYouDict:
             pass
         else:
             botMSG = "Thank you for using me, what can I help you with? "

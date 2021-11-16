@@ -9,6 +9,7 @@ Created on Thu Nov 11 09:07:35 2021
 class Name():
     usrName = "User"
     stndMSG = "Thank you, I will call you now"
+
     def requestName():
         """
         Request the name of the user and gives the possibility to not give a name
@@ -17,7 +18,7 @@ class Name():
         -------
         TYPE
             DESCRIPTION.
-            
+
             Asks if you want to give a name and only accepts "Yes" or "No"
             If yes, you have the possibility to insert a Name and automatically capitalises the answer for the output
             If no, you get the name "User" that has been set before, so outer classes can access this
