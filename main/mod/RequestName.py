@@ -20,8 +20,10 @@ class Name():
             DESCRIPTION.
 
             Asks if you want to give a name and only accepts "Yes" or "No"
-            If yes, you have the possibility to insert a Name and automatically capitalises the answer for the output
-            If no, you get the name "User" that has been set before, so outer classes can access this
+            If yes, you have the possibility to insert a Name and automatically
+            capitalises the answer for the output
+            If no, you get the name "User" that has been set before, so outer
+            classes can access this
 
         """
         qst = input("Hello User, may I ask your name? (Yes/No): ")

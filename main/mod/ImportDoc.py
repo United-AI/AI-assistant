@@ -17,7 +17,8 @@ class Importer():
         Fills our Sets with the Message databse that we collected/created.
         This live updates while the code is running.
         -------
-        Opens the txt, formats it accordinlgy and inputs it line by line into the set, every line is one set slot
+        Opens the txt, formats it accordinlgy and inputs
+        it line by line into the set, every line is one set slot
         (starting with set position 0 and line 1)
 
         Is launched by _answer()

@@ -9,7 +9,7 @@ from mod import MessageManager as mm
 from mod import RequestName as rn
 
 
-class main():
+class Main():
 
     def __init__(self):
         """
@@ -21,4 +21,4 @@ class main():
             mm.Manager.__init__()
 
 
-main()
+Main()

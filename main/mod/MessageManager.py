@@ -5,7 +5,7 @@ Created on Mon Nov 15 13:47:36 2021
 @author: mHiko
 """
 from mod import ImportDoc as impdi
-
+import re
 
 class Manager():
     msg = ""
@@ -34,23 +34,32 @@ class Manager():
 
     def _answer():
         """
-        Is the Main Unit of sending out answers, it compares the user message with the Dict and sends out an answer accordingly
+        Is the Main Unit of sending out answers, it compares the 
+        user message with the Dict and sends out an answer accordingly
 
         Returns the answer of the bot
         -------
         TYPE
             DESCRIPTION.
 
-        Formats and acccesses the Dict and compares with "not in", if the from user inputted Message is part of the set
-        It is not case sensitive but for now it can only compare identical strings
+        Formats and acccesses the Dict and compares with "not in",
+        if the from user inputted Message is part of the set
+        Looks for ONLY the word, not more or less, is not case sensitive
+        and should work for every string
 
         """
         impdi.Importer.inputDoc()
         botMSG = "error103"
-        if Manager.msg.lower() not in impdi.Importer.helloDict:
-            pass
-        else:
-            botMSG = "Hey, how are you?"
+        for val in impdi.Importer.helloDict:
+            helloComp=val
+            pattern = r'(^|[^\w]){}([^\w]|$)'.format(helloComp)
+            print(pattern)
+            pattern = re.compile(pattern, re.IGNORECASE)
+            matches = re.search(pattern, Manager.msg.lower())
+            if bool(matches):
+                botMSG = "Hey, how are you?"
+            else:
+                pass
         if Manager.msg.lower() not in impdi.Importer.howAreYouDict:
             pass
         else:
